@@ -1,14 +1,35 @@
 package logicaNegocio;
 
 public class Leon extends Animal {
+  public TipoHabitat habitat;
+  
+  
+     public Leon(){
+     this.habitat = TipoHabitat.TERRESTRE;
+  }
+        
 
-    public void emitirSonido() {
-        throw new UnsupportedOperationException("Unimplemented method 'emitirSonido'");
+    @Override
+    public String emitirSonido() {
+          
+       return "Rugido";
     }
 
-    public void obtenerDieta() {
-        throw new UnsupportedOperationException("Unimplemented method 'obtenerDieta'");
+    @Override
+    public String obtenerDieta() {
+           
+       return "Carnívoro";
     }
-    // TODO: Aquí va tu código
+
+  @Override
+    public TipoHabitat getHabitat() {
+        return habitat;
+    }
+
+    
+
+  
+  
+   
 
 }
